@@ -2,7 +2,7 @@
 Jose Miguel López Giraldo - 448927
 Manuela Cuervo Zapata - 446641
 Juan Pablo Correa Cataño - 449689
-##Altlético Catatumbo
+### Altlético Catatumbo
 
 ## Enunciado
 * Debes hacer una aplicación en el lenguaje ensamblador estudiado en esta unidad. La aplicación deberá funcionar en un loop infinito. La aplicación lee el teclado y pinta la pantalla de negro si la tecla presionada es la misma almacenada en la posición 0 de la RAM. La aplicación debe borrar la pantalla si la tecla presionada es la misma almacenada en la posición 1 de la RAM. No olvides que la aplicación debe correr en un ciclo infinito.
@@ -42,28 +42,23 @@ while (true)
 {
     if (MEMORY[KEYBOARD] != 0)
     {
+        if (MEMORY[KEYBOARD] == MEMORY[0])
+        {
+            MEMORY[17] = -1;
+        }
+         MEMORY[16] = 16384
+         
         if (MEMORY[KEYBOARD] == MEMORY[1])
         {
-            while(MEMORY[16] <= 24576)
-            {
-                MEMORY[16] = MEMORY[16] + 1;
-                MEMORY[MEMORY[16]] = 0xffff;
-            }
-            MEMORY[16] = 16384
-         }
-         
-         if (MEMORY[KEYBOARD] == MEMORY[0])
-         {
-             while(MEMORY[16] <= 24576)
-             {
-                  MEMORY[16] = MEMORY[16] + 1;
-                  MEMORY[MEMORY[16]] = 0x0000;
-             }
-              MEMORY[16] = 16384
-          }
-      }
- }
-
+            MEMORY[17] = 0;
+        }
+     }
+     
+     For(MEMORY[18] = 16384; MEMORY[18] < 24576; MEMORY[18]++)
+     {
+        MEMORY[18] = MEMORY[17]
+     }
+}
 ```
 
 # Code Overview
