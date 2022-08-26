@@ -56,4 +56,4 @@
 	@LOOP
 	D;JNE
 	@START
-	0;JMPcd ..
+	0;JMP
