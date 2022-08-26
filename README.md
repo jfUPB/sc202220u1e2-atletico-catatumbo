@@ -42,26 +42,26 @@ while (true)
 {
     if (MEMORY[KEYBOARD] != 0)
     {
-        if (MEMORY[KEYBOARD] == MEMORY[0])
+        if (MEMORY[KEYBOARD] == MEMORY[1])
         {
-            while(MEMORY[18] <= 24576)
+            while(MEMORY[16] <= 24576)
             {
-                MEMORY[18] = MEMORY[18] + 1;
-                MEMORY[MEMORY[18]] = 0x0000;
+                MEMORY[16] = MEMORY[16] + 1;
+                MEMORY[MEMORY[16]] = 0xffff;
             }
-            MEMORY[18] = 16384
+            MEMORY[16] = 16384
          }
         
         else if (MEMORY[KEYBOARD] == MEMORY[0])
         {
             if (MEMORY[KEYBOARD] == MEMORY[0])
             {
-                while(MEMORY[18] <= 24576)
+                while(MEMORY[16] <= 24576)
                 {
-                    MEMORY[18] = MEMORY[18] + 1;
-                    MEMORY[MEMORY[18]] = 0x0000;
+                    MEMORY[16] = MEMORY[16] + 1;
+                    MEMORY[MEMORY[16]] = 0x0000;
                 }
-                MEMORY[18] = 16384
+                MEMORY[16] = 16384
             }
         }
     }
