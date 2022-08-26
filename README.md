@@ -51,20 +51,18 @@ while (true)
             }
             MEMORY[16] = 16384
          }
-        
-        else if (MEMORY[KEYBOARD] == MEMORY[0])
-        {
-            if (MEMORY[KEYBOARD] == MEMORY[0])
-            {
-                while(MEMORY[16] <= 24576)
-                {
-                    MEMORY[16] = MEMORY[16] + 1;
-                    MEMORY[MEMORY[16]] = 0x0000;
-                }
-                MEMORY[16] = 16384
-            }
-        }
-    }
+         
+         if (MEMORY[KEYBOARD] == MEMORY[0])
+         {
+             while(MEMORY[16] <= 24576)
+             {
+                  MEMORY[16] = MEMORY[16] + 1;
+                  MEMORY[MEMORY[16]] = 0x0000;
+             }
+              MEMORY[16] = 16384
+          }
+      }
+ }
 
 ```
 
