@@ -36,7 +36,7 @@ Juan Pablo Correa Cataño - 449689
 # Traducción a C++
 ```
 
-MEMORY[16] = 16384;
+```cpp
 
 while (true)
 {
@@ -46,19 +46,23 @@ while (true)
         {
             MEMORY[17] = -1;
         }
-         MEMORY[16] = 16384
-         
-        if (MEMORY[KEYBOARD] == MEMORY[1])
+        else if (MEMORY[KEYBOARD] == MEMORY[1])
         {
             MEMORY[17] = 0;
         }
-     }
-     
-     For(MEMORY[18] = 16384; MEMORY[18] < 24576; MEMORY[18]++)
-     {
-        MEMORY[18] = MEMORY[17]
+        else{
+           continue;
+        }
+        
+        MEMORY[16] = 16384;
+        
+      for(MEMORY[18] = 16384; MEMORY[18] < 24576; MEMORY[18]++)
+      {
+        MEMORY[18] = MEMORY[17];
+       }
      }
 }
+
 ```
 
 # Code Overview
