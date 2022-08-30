@@ -36,7 +36,7 @@ Juan Pablo Correa Cataño - 449689
 # Traducción a C++
 ```
 
-```cpp
+``` cpp
 
 while (true)
 {
