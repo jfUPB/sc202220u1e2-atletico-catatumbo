@@ -54,13 +54,14 @@ while (true)
            continue;
         }
         
-        MEMORY[16] = 16384;
         
       for(MEMORY[18] = 16384; MEMORY[18] < 24576; MEMORY[18]++)
       {
-        MEMORY[18] = MEMORY[17];
-       }
-     }
+        MEMORY[MEMORY[18]] = MEMORY[17];
+      }
+    }
+     
+
 }
 
 ```
